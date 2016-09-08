@@ -16,5 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Version of CDAP Ambari Service
 default['cdap']['ambari']['version'] = '3.5.2-1'
+# Should cdap::ambari recipe install/manage Ambari
 default['cdap']['ambari']['install'] = false
+# CDAP Ambari Service source repository definition
+default['cdap_auto']['git']['repo']['cdap-ambari-service'] = {
+  'uri'    => 'https://github.com/caskdata/cdap-ambari-service.git',
+  'branch' => 'develop',
+  'dir' => '/data/git/cdap-ambari-service',
+  'depth'  => 1,
+  'sync'   => true
+}
